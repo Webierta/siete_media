@@ -9,7 +9,7 @@
 
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="siete_media"
+        android:label="Siete y media"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
