@@ -178,7 +178,7 @@ class _JuegoState extends State<Juego> {
 
   buildButton(User user) {
     return Container(
-      width: screenWidth(context, dividedBy: 3),
+      width: screenWidth(context, dividedBy: 2),
       padding: EdgeInsets.all(10.0),
       child: RaisedButton.icon(
         onPressed: ((user.pasado || user.plantado || user.puntuacion == 0.0) ||
@@ -194,7 +194,7 @@ class _JuegoState extends State<Juego> {
           '${user.puntuacion}',
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 20,
+            fontSize: 18,
           ),
         ),
         icon: (() {

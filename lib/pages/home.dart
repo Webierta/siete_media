@@ -92,7 +92,7 @@ class _HomeState extends State<Home> {
                         title: Text(
                           multiplayer ? '2 Jugadores' : 'Contra Android',
                           style: TextStyle(
-                            fontSize: 16.0,
+                            fontSize: 14.0,
                             color: Colors.white,
                           ),
                         ),
@@ -121,7 +121,7 @@ class _HomeState extends State<Home> {
                         title: Text(
                           mute ? 'Sonido Off' : 'Sonido On',
                           style: TextStyle(
-                            fontSize: 16.0,
+                            fontSize: 14.0,
                             color: Colors.white,
                           ),
                         ),
