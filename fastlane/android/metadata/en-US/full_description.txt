@@ -1,0 +1,5 @@
+<p>This App recreates the classic card game Half past seven.</p>
+<p>It is played with a Spanish deck of 40 cards (without 8 or 9), in which each card is worth as many points as its numerical value except the figures (jack, horse and king), which are worth half a point.</p>
+<p>It is played in turns against the bank or between two players (the second player acts as the bank).</p>
+<p>First a player draws a card from the deck until he stands by clicking on the score (if it is not passed before and then loses); When the first player stands, the turn of the other player or the bank begins.</p>
+<p>The player who comes closest to 7.5 wins without going over. In the event of a tie, the bank wins.</p>

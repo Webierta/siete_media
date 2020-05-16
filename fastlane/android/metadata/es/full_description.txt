@@ -1,0 +1,5 @@
+<p>Esta App recrea el clásico juego de cartas Las siete y media.</p>
+<p>Se juega con una baraja española de 40 cartas (sin 8 ni 9), en la que cada carta vale tantos puntos como su valor numérico excepto las figuras (sota, caballo y rey), que valen medio punto.</p>
+<p>Se juega por turnos contra la banca o entre dos jugadores (el segundo jugador actúa como la banca).</p>
+<p>Primero un jugador va sacando carta del mazo de la baraja hasta que se planta pulsando sobre la puntuación (si no se pasa antes y entonces pierde); cuando el primer jugador se planta, empieza el turno del otro jugador o de la banca.</p>
+<p>Gana el jugador que más se acerque a 7,5 sin pasarse. En caso de empate, la banca gana.</p>
