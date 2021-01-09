@@ -24,10 +24,9 @@ class About extends StatelessWidget {
               style: TextStyle(fontSize: 20.0, color: Colors.green[900]),
               child: Column(children: [
                 Text('Las Siete y media',
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0)),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0)),
                 Text(
-                    'Versión 1.0 (Copyleft 2020)\nJesús Cuerda (Webierta)\n'
+                    'Versión 1.1 (Copyleft 2020)\nJesús Cuerda (Webierta)\n'
                     'All Wrongs Reserved.\nLicencia GPLv3.',
                     textAlign: TextAlign.center,
                     style: TextStyle()),
@@ -39,8 +38,7 @@ class About extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
-                Text(
-                    'Aplicación gratuita y sin publicidad. No se utiliza ningún dato del usuario. '
+                Text('Aplicación gratuita y sin publicidad. No se utiliza ningún dato del usuario. '
                     'Software de código abierto (código fuente en Github), libre de spyware, malware, '
                     'virus o cualquier proceso que atente contra tu dispositivo o viole tu privacidad. '
                     'Esta aplicación no extrae ni almacena ninguna información ni requiere ningún permiso '
@@ -66,8 +64,7 @@ class About extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
-                Text(
-                    'Puedes colaborar con el desarrollo de ésta y próximas aplicaciones haciendo '
+                Text('Puedes colaborar con el desarrollo de ésta y próximas aplicaciones haciendo '
                     'una pequeña aportación vía PayPal a través de este enlace:\n'),
                 GestureDetector(
                   child: Container(
@@ -93,8 +90,7 @@ class About extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
-                Text(
-                    'Imágenes baraja: Basquetteur / CC BY-SA (Wikimedia Commons).\n'
+                Text('Imágenes baraja: Basquetteur / CC BY-SA (Wikimedia Commons).\n'
                     'Sonidos: Banco de imágenes y sonidos del Instituto de Tecnologías '
                     'Educativas. Ministerio de Educación.'),
               ]),
