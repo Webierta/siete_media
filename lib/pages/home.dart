@@ -71,8 +71,7 @@ class _HomeState extends State<Home> {
                     children: <Widget>[
                       SwitchListTile(
                         dense: true,
-                        contentPadding:
-                            EdgeInsets.only(left: 60.0, right: 60.0),
+                        contentPadding: EdgeInsets.only(left: 60.0, right: 60.0),
                         value: multiplayer,
                         onChanged: (bool valor) {
                           if (!mute) Sonido.tecla.audio(); //audio('tecla');
@@ -100,8 +99,7 @@ class _HomeState extends State<Home> {
                       ),
                       SwitchListTile(
                         dense: true,
-                        contentPadding:
-                            EdgeInsets.only(left: 60.0, right: 60.0),
+                        contentPadding: EdgeInsets.only(left: 60.0, right: 60.0),
                         value: mute,
                         onChanged: (bool valor) {
                           if (!mute) Sonido.tecla.audio();
@@ -172,17 +170,15 @@ class _HomeState extends State<Home> {
 }
 
 class MenuBotones extends StatelessWidget {
-  const MenuBotones({
-    Key key,
-  }) : super(key: key);
+  const MenuBotones({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
       itemBuilder: (BuildContext context) {
         return [
-          buildItemMenu(page: Info(), icono: Icons.info),
-          buildItemMenu(page: About(), icono: Icons.code)
+          buildItemMenu(page: Info(), icono: Icons.info, titulo: 'Info'),
+          buildItemMenu(page: About(), icono: Icons.code, titulo: 'About')
         ];
       },
       elevation: 4,
@@ -195,7 +191,7 @@ class MenuBotones extends StatelessWidget {
     );
   }
 
-  PopupMenuItem<Widget> buildItemMenu({Widget page, IconData icono}) {
+  PopupMenuItem<Widget> buildItemMenu({Widget page, IconData icono, String titulo}) {
     return PopupMenuItem(
       value: page,
       child: Row(
@@ -204,7 +200,8 @@ class MenuBotones extends StatelessWidget {
           Icon(icono, color: Colors.green[900]),
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
-            child: Text(page.toString()),
+            //child: Text(page.toString()),
+            child: Text(titulo),
           ),
         ],
       ),

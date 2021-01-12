@@ -30,7 +30,7 @@ class _JuegoState extends State<Juego> {
     super.initState();
     if (!widget.mute) Sonido.baraja.audio(); //audio('baraja');
     imgCarta = Image.asset('assets/images/r0.png');
-    _titulo = 'Toma una carta del mazo';
+    _titulo = 'Toma una carta';
     turno = jugador;
   }
 
@@ -40,7 +40,7 @@ class _JuegoState extends State<Juego> {
       carta = null;
       imgCarta = Image.asset('assets/images/r0.png');
       baraja = Carta.crearBaraja;
-      _titulo = 'Toma una carta del mazo';
+      _titulo = 'Toma una carta';
       jugador.resetUser();
       crupier.resetUser();
       turno = jugador;
@@ -70,13 +70,9 @@ class _JuegoState extends State<Juego> {
           if (!widget.mute) Sonido.win.audio(); //audio('win');
         }
         turno.pasado = true;
-        _titulo = turno.nombre == Player.Jugador
-            ? 'Pierdes: Te has pasado'
-            : '¡Has ganado!';
+        _titulo = turno.nombre == Player.Jugador ? '¡Te has pasado!' : '¡Has ganado!';
       } else {
-        _titulo = turno.nombre == Player.Jugador
-            ? '¿Carta o te plantas?'
-            : 'Turno de la banca';
+        _titulo = turno.nombre == Player.Jugador ? '¿Carta o te plantas?' : 'Turno de la banca';
       }
       //imgCarta = Image.asset('assets/images/${carta.palo}${carta.numero}.png');
       imgCarta = carta.imagen;
@@ -137,13 +133,11 @@ class _JuegoState extends State<Juego> {
               children: [
                 Container(
                   height: sextoAlto * 3,
-                  padding: const EdgeInsets.only(
-                      left: 20.0, right: 20.0, top: 30.0, bottom: 20.0),
+                  padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 30.0, bottom: 20.0),
                   child: InkWell(
                     child: imgCarta,
                     onTap: ((turno.pasado || turno.plantado) ||
-                            (turno.nombre == Player.Crupier &&
-                                widget.multiplayer == false))
+                            (turno.nombre == Player.Crupier && widget.multiplayer == false))
                         ? null
                         : nuevaCarta,
                   ),
@@ -198,10 +192,8 @@ class _JuegoState extends State<Juego> {
           ),
         ),
         icon: (() {
-          if (turno == user &&
-              user.puntuacion == 0.0 &&
-              !user.pasado &&
-              !user.plantado) return Icon(Icons.lock_open);
+          if (turno == user && user.puntuacion == 0.0 && !user.pasado && !user.plantado)
+            return Icon(Icons.lock_open);
           if (user.puntuacion == 0.0) return Icon(Icons.lock);
           if (user.pasado) return Icon(Icons.thumb_down);
           if (user.plantado) return Icon(Icons.thumb_up);
@@ -219,8 +211,7 @@ class _JuegoState extends State<Juego> {
           if (user.pasado) return Colors.red[900];
           return Colors.yellow[800];
         }()),
-        disabledTextColor:
-            user.puntuacion == 0.0 ? Colors.green[900] : Colors.white,
+        disabledTextColor: user.puntuacion == 0.0 ? Colors.green[900] : Colors.white,
       ),
     );
   }

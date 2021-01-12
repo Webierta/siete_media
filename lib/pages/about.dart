@@ -4,11 +4,6 @@ import 'package:universal_html/html.dart' as html;
 import 'package:flutter/foundation.dart';
 
 class About extends StatelessWidget {
-  //static const String id = 'about';
-  //final String titulo = 'About';
-
-  //const About({Key key, this.id, this.titulo}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +21,7 @@ class About extends StatelessWidget {
                 Text('Las Siete y media',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0)),
                 Text(
-                    'Versión 1.1 (Copyleft 2020)\nJesús Cuerda (Webierta)\n'
+                    'Versión 1.2 (Copyleft 2020)\nJesús Cuerda (Webierta)\n'
                     'All Wrongs Reserved.\nLicencia GPLv3.',
                     textAlign: TextAlign.center,
                     style: TextStyle()),
